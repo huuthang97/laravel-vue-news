@@ -12,9 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.frontend');
 });
+Route::get('/category/{slug}', function () {
+    return view('layouts.frontend');
+});
+
+Route::get('/detail/{slug}', function () {
+    return view('layouts.frontend');
+});
+Route::get('/contact', function () {
+    return view('layouts.frontend');
+});
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('admin', 'HomeController@index')->name('home');
+Route::get('admin/home', 'HomeController@index')->name('home');
+
+Route::get('admin/{path}', 'HomeController@index')->where('path', '[A-Za-z]+?');
+Route::get('admin/{path}/{path2}', 'HomeController@index')->where(['path' => '[A-Za-z]+?', 'path2' => '[A-Za-z]+?'] );
