@@ -1,5 +1,4 @@
 ﻿
-
 <template>
 <div>
     <footer>
@@ -9,7 +8,7 @@
                     <div class="col-sm-12">
                         <div class="d-sm-flex justify-content-between align-items-center ">
                             <div class="fs-14 font-weight-600">
-                                © 2020 All rights reserved.
+                                © 2020 All rights reserved
                             </div>
                         </div>
                     </div>
@@ -24,7 +23,7 @@
 
 
 export default {
-    name: 'Footer',
+    name: "Footer",
     
 }
 </script>
